@@ -3,6 +3,8 @@ import { AiOutlineDownCircle } from 'react-icons/ai';
 import { FiCircle } from 'react-icons/fi';
 import { BsSquareFill } from 'react-icons/bs';
 import { BsSquare } from 'react-icons/bs';
+import { FaGenderless } from 'react-icons/fa';
+
 
 function Card(props){
 
@@ -10,7 +12,6 @@ function Card(props){
 
     const Stats = {
         "hp":props.hp,
-        "ataque":props.ataque,
         "ataque":props.ataque,
         "ataqueEsp":props.ataqueEsp,
         "defesa":props.defesa,
@@ -32,7 +33,23 @@ function Card(props){
                             <label className="card-caracteristica"> {props.altura}</label>
                             <label className="card-caracteristica"> {props.categoria}</label>
                             <label className="card-caracteristica"> {props.abilidades}</label>
-                            <label className="card-caracteristica"> {props.genero}</label>
+                            <label className="card-caracteristica">
+                                {
+                                    (props.genero === "feminino") ?
+                                        <FaGenderless style={{"color":"ff006e"}} />
+                                    :
+                                        (props.genero === "masculino") ?
+                                            <FaGenderless style={{"color":"3a86ff"}} />
+                                        :
+                                            (props.genero === "ambos") ?
+                                                <>
+                                                    <FaGenderless style={{"color":"3a86ff"}} />
+                                                    <FaGenderless style={{"color":"ff006e"}} />
+                                                </>
+                                            :
+                                                <FaGenderless style={{"color":"8d99ae"}} />
+                                }
+                            </label>
                             <div>
                                 <label className="card-caracteristica"> 
                                     { props.tipo1 === "inseto" ? <FiCircle style={{"color":"007f5f"}} /> : props.tipo1 === "sombrio" ? <FiCircle style={{"color":"000000"}} /> : props.tipo1 === "dragao" ? <FiCircle style={{"color":"457b9d"}} /> : props.tipo1 === "eletrico" ? <FiCircle style={{"color":"ffb703"}} /> : props.tipo1 === "fada" ? <FiCircle style={{"color":"ff006e"}} /> : props.tipo1 === "lutador" ? <FiCircle style={{"color":"d62828"}} /> : props.tipo1 === "fogo" ? <FiCircle style={{"color":"d00000"}} /> : props.tipo1 === "voador" ? <FiCircle style={{"color":"386480"}} /> : props.tipo1 === "fantasma" ? <FiCircle style={{"color":"54455f"}} /> : props.tipo1 === "grama" ? <FiCircle style={{"color":"aacc00"}} /> : props.tipo1 === "terra" ? <FiCircle style={{"color":"C59130"}} /> : props.tipo1 === "gelo" ? <FiCircle style={{"color":"caf0f8"}} /> : props.tipo1 === "normal" ? <FiCircle style={{"color":"5F4D6A"}} /> : props.tipo1 === "venenoso" ? <FiCircle style={{"color":"6d08af"}} /> : props.tipo1 === "psiquico" ? <FiCircle style={{"color":"ff006e"}} /> : props.tipo1 === "pedra" ? <FiCircle style={{"color":"7f5539"}} /> : props.tipo1 === "aco" ? <FiCircle style={{"color":"33c1b1"}} /> : props.tipo1 === "aquatico" ? <FiCircle style={{"color":"03045e"}} /> : null }

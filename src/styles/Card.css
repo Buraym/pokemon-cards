@@ -1,0 +1,106 @@
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.card{
+    display:flex;
+    min-width:300px;
+    min-height:450px;
+    
+
+    justify-content: center;
+    align-items: baseline;
+    align-content: baseline;
+    flex-direction:column;
+}
+
+.card-conteudo{
+    display:flex;
+    width:300px;
+    height:450px;
+    background-color: rgba(141, 153, 174, 20%);
+    border: 5px double rgba(141, 153, 174, 20%);
+    border-radius: 30px;
+    perspective: 1000;
+    transform-style: preserve-3d;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction:column;
+}
+
+.card-foto{
+    width:300px;
+    height:450px;
+}
+
+.card-nome{
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+    z-index:2;
+}
+
+.card-pokedexN{
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+    z-index:2;
+}
+
+.card-caracteristica-caixa{
+    display:flex;
+    width:275px;
+    height:200px;
+    overflow: scroll;
+    overflow-wrap: break-word;
+
+    justify-content: start;
+    align-items: start;
+    align-content:center;
+    flex-direction:column;
+}
+
+.card-caracteristica1{
+    display:none;
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+}
+
+.card-caracteristica2{
+    display:none;
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+}
+
+.card-caracteristica3{
+    display:none;
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+}
+
+.card-caracteristica4{
+    display:none;
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+}
+
+.card-caracteristica5{
+    display:none;
+    font-family: 'Bebas Neue', cursive;
+    color:rgba(0, 0, 0, 30%);
+    font-size: 25px;
+}
